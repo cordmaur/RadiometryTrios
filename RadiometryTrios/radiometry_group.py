@@ -437,9 +437,9 @@ class RadiometryGroup:
         :param r_type: name of the radiometry to be obtained
         :return: DataFrame with the desired radiometry
         """
-        if r_type in self.interp_radiances:
+        if r_type in self.radiometries['interpolated'].keys():
             return self.get_radiometry_data(r_type, interpolated=True)
-        elif r_type in self.radiometries:
+        elif r_type in self.radiometries['raw'].keys():
             return self.get_radiometry_data(r_type, interpolated=False)
         else:
             print(f'No radiometry {r_type} found.')
