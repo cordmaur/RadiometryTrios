@@ -1,6 +1,6 @@
 # RadiometryTrios package (v 0.0.1 released)
 The `RadiometryTrios` package has been released for testing. 
-This package is responsible for manipulating hyperspectral radiometry measurements from field campaigns, using the TRIOS equipment. 
+This package allows the manipulation of hyperspectral radiometry measurements from field campaigns, using the TRIOS equipment. 
 
 ![image](https://user-images.githubusercontent.com/19617404/136028825-0f6d026d-9398-4bab-aed0-96d30a1b93b5.png)
 
@@ -41,8 +41,17 @@ To open the `.mdb` files, it is necessary to have a Microsoft Access ODBC driver
 ```https://www.microsoft.com/en-us/download/details.aspx?id=13255```
 
 ## Documentation
-The basic usage of the `RadiometryTrios` package is documented in the notebook: <br>
-```nbs/00_Radiometry.ipynb```
+An introduction can be found at the following medium story:<br>
+https://towardsdatascience.com/a-python-framework-to-retrieve-and-process-hyperspectral-field-measurements-from-trios-sensors-5e900158648e
+<br>
+![image](https://user-images.githubusercontent.com/19617404/136195985-ccf15c25-b54a-43c9-a327-c5b8a5e74ca9.png)
+<br>
+Additionally, the basic usage of the `RadiometryTrios` package is documented in the notebooks: <br>
+```
+nbs/00_TriosMDB.ipynb
+nbs/01_Radiometry.ipynb
+```
+
 
 # Institutions
 * ANA - Agência Nacional de Águas (https://www.gov.br/ana/en/)
