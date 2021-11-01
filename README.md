@@ -40,6 +40,10 @@ Pillow
 To open the `.mdb` files, it is necessary to have a Microsoft Access ODBC driver installed (the `pyodbc` package will use this driver). To install, the driver can be downloaded from the Microsoft site:
 ```https://www.microsoft.com/en-us/download/details.aspx?id=13255```
 
+<b>Note:</b> The Python and the ODBC driver must match bit version (32 vs 64), according to the `pyodbc` documentation. It is important to check the ODBC data source before continuing. 
+![image](https://user-images.githubusercontent.com/19617404/139720738-543d9a88-3682-4667-98d0-8cdf26e44b8e.png)
+
+
 ## Documentation
 An introduction can be found at the following medium story:<br>
 https://towardsdatascience.com/a-python-framework-to-retrieve-and-process-hyperspectral-field-measurements-from-trios-sensors-5e900158648e
