@@ -181,7 +181,7 @@ class BaseRadiometry:
 
     @staticmethod
     def plot_reflectances(df, bands, color=None, hover_vars=None, colormap='viridis', log_color=True,
-                          colorbar=False, show_legend=False, discrete=True, line_width=1):
+                          colorbar=False, show_legend=False, discrete=True, line_width=1, **kwargs):
         """
         Plot radiometry curves given a dataframe and the bands (columns).
         :param df: Dataframe with the values
@@ -263,7 +263,9 @@ class BaseRadiometry:
             font=dict(
                 family="Courier New, monospace",
                 size=12,
-                color="RebeccaPurple"))
+                color="RebeccaPurple"),
+            **kwargs
+        )
 
         return fig
 
@@ -435,7 +437,7 @@ class Radiometry:
         numeric_columns = data._get_numeric_data().columns
 
         # set the color based on the datetime
-        color = data.index.astype('int32') if not mean else None
+        color = data.index.view('int64') if not mean else None
 
         fig = BaseRadiometry.plot_reflectances(data, numeric_columns, color=color, discrete=False, colorbar=False)
 

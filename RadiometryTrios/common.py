@@ -257,6 +257,8 @@ def apply_subplot(fig, subplot, position):
             update_dic.update({param: subplot.layout[axis][param]})
         update_ax_func(update_dic, row=position[0], col=position[1])
 
+    fig.update_yaxes(range=subplot['layout']['yaxis']['range'], row=position[0], col=position[1])
+
     return fig
 
 
